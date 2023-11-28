@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sudoku</title>
+  </head>
+</div>
+
+  <body>
+      <div style="align-items:center; justify-content: center; display: flex; text-align: center; background-color: cadetblue;">
+          <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;margin-left: -20px;">SUDOKU SOLVER</h1>
+          <div style="margin-left: -90px;">
+            <button onClick="solve()"><code>Solve</code></button>
+            <button onClick="reset()"><code>Reset</code></button>
+          </div>
+      </div>
+      <div id="msg">Input sudoku</div>
+     <div style="align-items: center; display: flex; justify-content: center; margin-top: 20px" >
+      <table cellpaddibg="0" cellspacing="0">
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+          <td>
+            <input type="number" class="cell" min="1" max="9" value="0" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="sudoku.js"></script>
+    
+  </body>
+</html>
